@@ -175,7 +175,7 @@ export default class Editable extends React.Component{
         if((this.state.isEditing || this.props.alwaysEditing) && this.props.mode === "inline"){
             return(this.getEditingComponent())
         }else{
-            let value = this.state.value? this.state.value: "No value"
+            let value = this.state.value? this.state.value: "Add a caption"
             //format date objects for display, might add a custom format function here later
             value = this.props.type === "date" && this.state.value? new window.Date(this.state.value).toUTCString().slice(5, 16) : value
             value = this.props.type === "file" && this.state.value? this.state.value.name : value
